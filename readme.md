@@ -1,14 +1,16 @@
-# Lets Petits Plats
+# Kasa
 
  Code du projet 11 Kasa de la formation React d'OpenClassroom en React et SASS.
 
 ### Pré-requis
 
 - Un navigateur internet
+- NPM
 
 ## Démarrage
 
-Ouvrez le fichier index.html avec un navigateur internet.
+- installez les dépendences avec `npm install`
+- lancez le server avec `npm start`
 
 ## Fabriqué avec
 
