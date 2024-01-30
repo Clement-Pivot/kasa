@@ -9,8 +9,8 @@
     "web-vitals": "^3.5.2"
   },
   "scripts": {
-    "sass": "sass --watch ./src/styles/main.scss:./src/styles/main.css",
-    "prefix": "postcss --watch ./src/styles/main.css --use autoprefixer -d ./public/",
+    "sass": "sass --watch ./src/main.scss:./src/main.css",
+    "prefix": "postcss --watch ./src/main.css --use autoprefixer -d ./public/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

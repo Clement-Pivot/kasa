@@ -11,8 +11,8 @@
 *.sln.docstates
 
 Présentation
-src/styles/main.css
-src/styles/main.css.map
+src/main.css
+src/main.css.map
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
