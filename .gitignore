@@ -11,6 +11,9 @@
 *.sln.docstates
 
 Présentation
+package-lock.json
+src/styles/main.css
+src/styles/main.css.map
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
