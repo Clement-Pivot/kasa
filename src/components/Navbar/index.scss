@@ -3,6 +3,7 @@
 
 .nav {
   padding: 20px;
+  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
   &__logo {
@@ -35,5 +36,10 @@
     .active {
       text-decoration: underline;
     }
+  }
+  @include desktop {
+    padding: 40px;
+    padding-bottom: 0;
+    max-width: 1240px;
   }
 }

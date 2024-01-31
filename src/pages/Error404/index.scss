@@ -36,4 +36,7 @@ section {
       font-size: 18px;
     }
   }
+  @include desktop {
+    row-gap: 139px;
+  }
 }
