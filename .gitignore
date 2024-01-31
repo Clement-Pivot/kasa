@@ -13,6 +13,7 @@
 Présentation
 src/main.css
 src/main.css.map
+.vscode
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
