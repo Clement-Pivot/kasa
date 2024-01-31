@@ -1,42 +1,42 @@
 @import '../../utils/variables';
 @import '../../utils/mixins';
 
-section {
+.error404 {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 113px;
   margin: 113px 0;
-  h1,
-  h2,
-  a {
+  &__header,
+  &__text,
+  &__link {
     color: $primary-color;
     text-align: center;
     margin: 0;
   }
-  h1 {
+  &__header {
     font-size: 96px;
-    @include desktop {
-      font-size: 288px;
-    }
   }
-  h2 {
+  &__text {
     font-weight: normal;
     line-height: 142.6%;
     font-size: 18px;
     width: 260px;
-    @include desktop {
-      font-size: 36px;
-      width: auto;
-    }
   }
-  a {
+  &__link {
     font-size: 14px;
-    @include desktop {
-      font-size: 18px;
-    }
   }
   @include desktop {
     row-gap: 139px;
+    &__header {
+      font-size: 288px;
+    }
+    &__text {
+      font-size: 36px;
+      width: auto;
+    }
+    &__link {
+      font-size: 18px;
+    }
   }
 }
