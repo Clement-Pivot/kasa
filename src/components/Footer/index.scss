@@ -1,0 +1,25 @@
+@import '../../utils/mixins.scss';
+
+.footer {
+  position: relative;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px;
+  align-items: center;
+  &__logo {
+    width: 122px;
+    height: auto;
+  }
+  &__copyright {
+    text-align: center;
+    width: 120px;
+    font-size: 12px;
+    @include desktop {
+      width: 500px;
+      font-size: 24px;
+    }
+  }
+}
