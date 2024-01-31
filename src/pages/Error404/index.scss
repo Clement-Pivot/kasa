@@ -1,0 +1,39 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 113px;
+  margin: 113px 0;
+  h1,
+  h2,
+  a {
+    color: $primary-color;
+    text-align: center;
+    margin: 0;
+  }
+  h1 {
+    font-size: 96px;
+    @include desktop {
+      font-size: 288px;
+    }
+  }
+  h2 {
+    font-weight: normal;
+    line-height: 142.6%;
+    font-size: 18px;
+    width: 260px;
+    @include desktop {
+      font-size: 36px;
+      width: auto;
+    }
+  }
+  a {
+    font-size: 14px;
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+}
