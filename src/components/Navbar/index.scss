@@ -1,7 +1,39 @@
 @import '../../utils/variables';
+@import '../../utils/mixins.scss';
 
 .nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
   &__logo {
     color: $primary-color;
+    width: 145px;
+    height: auto;
+    @include desktop {
+      width: 210px;
+    }
+  }
+  &__links {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    li {
+      margin-left: 26px;
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        @include desktop {
+          text-transform: none;
+          font-size: 24px;
+        }
+      }
+    }
+    .active {
+      text-decoration: underline;
+    }
   }
 }
