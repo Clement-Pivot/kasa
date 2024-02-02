@@ -4,23 +4,15 @@ import Hero from '../../components/Hero'
 import HomeCard from '../../components/HomeCard'
 import picture from '../../assets/homeHero.png'
 import { Logement } from '../../utils/types'
+import { useApi } from '../../utils/hooks'
 
 function Home() {
-  const [logementsList, setLogementsList] = useState([])
+  const [logementsList, setLogementsList] = useState<Logement[]>([])
+  const response = useApi('http://127.0.0.1:3000/data.json')
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/data.json')
-      .then((response) => {
-        if (response.ok) {
-          return response.json()
-        } else {
-          throw new Error('Probleme acces API')
-        }
-      })
-      .then((data) => {
-        setLogementsList(data)
-        data.map((d: any) => console.log(d))
-      })
-  }, [])
+    setLogementsList(response)
+  }, [response])
+
   return (
     <section className="content">
       <Hero picture={picture} text="Chez vous, partout et ailleurs" />
