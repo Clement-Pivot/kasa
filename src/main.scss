@@ -1,7 +1,16 @@
+@import './utils/mixins.scss';
+
 * {
   font-family: 'Montserrat', sans-serif;
 }
 
 body {
   margin: 0;
+}
+
+.content {
+  padding: 20px;
+  @include desktop {
+    padding: 40px 100px;
+  }
 }

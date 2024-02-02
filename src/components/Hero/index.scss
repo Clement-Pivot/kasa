@@ -1,0 +1,29 @@
+.hero {
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  &__img {
+    z-index: -1;
+    height: 111px;
+    object-fit: cover;
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+  }
+}

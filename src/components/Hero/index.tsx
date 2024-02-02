@@ -1,14 +1,15 @@
 import './index.scss'
 
-function Hero(target: { picture: any; text: string }) {
+interface Props {
+  picture: string
+  text?: string
+}
+
+function Hero({ picture, text = '' }: Props) {
   return (
     <div className="hero">
-      <img
-        className="hero__img"
-        src={target.picture}
-        alt="Hero section background"
-      />
-      <h1 className="hero__header">{target.text ? target.text : ''}</h1>
+      <img className="hero__img" src={picture} alt="Hero section background" />
+      <h1 className="hero__header">{text}</h1>
     </div>
   )
 }
