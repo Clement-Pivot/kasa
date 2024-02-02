@@ -1,0 +1,35 @@
+.homeCard {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: auto;
+  height: 255px;
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__title {
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    position: absolute;
+    font-weight: 400;
+    line-height: 143%;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+  }
+  &__gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  }
+}

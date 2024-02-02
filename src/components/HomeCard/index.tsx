@@ -4,8 +4,10 @@ import './index.scss'
 function HomeCard({ logement }: AccessedLogement) {
   return (
     <article className="homeCard">
-      <p className="homeCard__title">{logement.title}</p>
-      <img src={logement.pictures[0]} className="homeCard__img" alt="" />
+      <a className="homeCard__gradient" href={'/logement/' + logement.id}>
+        <p className="homeCard__title">{logement.title}</p>
+        <img src={logement.pictures[0]} className="homeCard__img" alt="" />
+      </a>
     </article>
   )
 }
