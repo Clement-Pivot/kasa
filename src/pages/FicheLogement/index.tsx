@@ -5,6 +5,7 @@ import { useApi } from '../../utils/hooks'
 import { Logement } from '../../utils/types'
 import Carousel from '../../components/Carousel'
 import Tag from '../../components/Tag'
+import Rating from '../../components/Rating'
 
 export default function FicheLogement() {
   const { logementId } = useParams<string>()
@@ -26,6 +27,9 @@ export default function FicheLogement() {
             {logement.tags.map((tag) => (
               <Tag text={tag} />
             ))}
+          </div>
+          <div className="logement__infos">
+            <Rating stars={logement.rating} />
           </div>
         </>
       ) : (
