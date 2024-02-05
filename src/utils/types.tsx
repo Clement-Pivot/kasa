@@ -3,6 +3,10 @@ export type Host = {
   picture: string
 }
 
+export type FicheLogementParams = {
+  logementId: string
+}
+
 export type AccessedLogement = {
   logement: Logement
 }
