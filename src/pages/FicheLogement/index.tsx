@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useApi } from '../../utils/hooks'
 import { Logement } from '../../utils/types'
 import Carousel from '../../components/Carousel'
+import Tag from '../../components/Tag'
 
 export default function FicheLogement() {
   const { logementId } = useParams<string>()
@@ -15,8 +16,19 @@ export default function FicheLogement() {
   }, [response, logementId])
 
   return (
-    <section className="content">
-      {logement?.pictures && <Carousel pictures={logement.pictures} />}
+    <section className="content logement">
+      {logement ? (
+        <>
+          <Carousel pictures={logement.pictures} />
+          <h1 className="logement__header">{logement.title}</h1>
+          <h2 className="logement__location">{logement.location} </h2>
+          {logement.tags.map((tag) => (
+            <Tag text={tag} />
+          ))}
+        </>
+      ) : (
+        ''
+      )}
     </section>
   )
 }
