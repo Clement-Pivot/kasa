@@ -1,7 +1,9 @@
 .carousel {
+  position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
   &__img {
     border-radius: 20px;
     width: 100%;
@@ -9,13 +11,11 @@
     object-fit: cover;
   }
   &__arrow {
-    margin-left: -24px;
+    position: absolute;
     right: 0;
-    width: 24px;
-    height: auto;
+    width: 7%;
     &--prev {
       margin-left: 0;
-      margin-right: -24px;
       left: 0;
       transform: rotateY(180deg);
     }
