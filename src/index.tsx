@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 
 import Error404 from './pages/Error404'
 import Home from './pages/Home'
+import FicheLogement from './pages/FicheLogement'
 
 const root = createRoot(document.getElementById('root')!)
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/logement/:logementId" element={<FicheLogement />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
