@@ -21,12 +21,16 @@ export default function Carousel({ pictures }: { pictures: string[] }) {
   }
   return (
     <div className="carousel">
-      <Arrow
-        onClick={prevPicture}
-        className="carousel__arrow carousel__arrow--prev"
-      />
+      {pictures.length > 1 && (
+        <Arrow
+          onClick={prevPicture}
+          className="carousel__arrow carousel__arrow--prev"
+        />
+      )}
       <img src={activePicture} alt="Carrousel" className="carousel__img" />
-      <Arrow onClick={nextPicture} className="carousel__arrow" />
+      {pictures.length > 1 && (
+        <Arrow onClick={nextPicture} className="carousel__arrow" />
+      )}
     </div>
   )
 }
