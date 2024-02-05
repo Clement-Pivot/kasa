@@ -22,9 +22,11 @@ export default function FicheLogement() {
           <Carousel pictures={logement.pictures} />
           <h1 className="logement__header">{logement.title}</h1>
           <h2 className="logement__location">{logement.location} </h2>
-          {logement.tags.map((tag) => (
-            <Tag text={tag} />
-          ))}
+          <div className="logement__tags">
+            {logement.tags.map((tag) => (
+              <Tag text={tag} />
+            ))}
+          </div>
         </>
       ) : (
         ''

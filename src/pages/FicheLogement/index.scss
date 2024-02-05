@@ -1,0 +1,19 @@
+@import '../../utils/variables.scss';
+
+.logement {
+  color: $primary-color;
+  &__header {
+    font-size: 18px;
+    margin: 15px 0 5px;
+    line-height: 140%;
+  }
+  &__location {
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+  &__tags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+  }
+}
