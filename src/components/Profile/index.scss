@@ -1,0 +1,13 @@
+.profile {
+  display: flex;
+  align-items: center;
+  &__names {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  &__picture {
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+}
