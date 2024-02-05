@@ -1,0 +1,13 @@
+@import '../../utils/variables.scss';
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  color: white;
+  width: 84px;
+  height: 18px;
+  font-size: 10px;
+  border-radius: 5px;
+}
