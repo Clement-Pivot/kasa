@@ -1,7 +1,7 @@
-import { AccessedLogement } from '../../utils/types'
+import { Logement } from '../../utils/types'
 import './index.scss'
 
-function HomeCard({ logement }: AccessedLogement) {
+function HomeCard({ logement }: { logement: Logement }) {
   return (
     <article className="homeCard">
       <a className="homeCard__gradient" href={'/logement/' + logement.id}>
