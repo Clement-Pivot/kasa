@@ -6,6 +6,7 @@ import { Logement } from '../../utils/types'
 import Carousel from '../../components/Carousel'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
+import Profile from '../../components/Profile'
 
 export default function FicheLogement() {
   const { logementId } = useParams<string>()
@@ -30,6 +31,7 @@ export default function FicheLogement() {
           </div>
           <div className="logement__infos">
             <Rating stars={logement.rating} />
+            <Profile user={logement.host} />
           </div>
         </>
       ) : (

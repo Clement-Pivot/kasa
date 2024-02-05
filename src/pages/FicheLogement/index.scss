@@ -15,5 +15,11 @@
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
+    margin-bottom: 15px;
+  }
+  &__infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
