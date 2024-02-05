@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useApi } from '../../utils/hooks'
 import { Logement } from '../../utils/types'
-import Carroussel from '../../components/Carroussel'
+import Carousel from '../../components/Carousel'
 
 export default function FicheLogement() {
   const { logementId } = useParams<string>()
@@ -16,7 +16,7 @@ export default function FicheLogement() {
 
   return (
     <section className="content">
-      {logement?.pictures && <Carroussel pictures={logement.pictures} />}
+      {logement?.pictures && <Carousel pictures={logement.pictures} />}
     </section>
   )
 }
