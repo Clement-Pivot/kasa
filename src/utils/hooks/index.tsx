@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Logement } from 'utils/types'
+import { Logement, CollapseInfo } from 'utils/types'
 
-export function useLogements(url: string): Logement[] {
-  const [response, setResponse] = useState<Logement[]>([])
+export function useApi(url: string): Logement[] | CollapseInfo[] {
+  const [response, setResponse] = useState<Logement[] | CollapseInfo[]>([])
   useEffect(() => {
     fetch(url)
       .then((res) => {

@@ -1,7 +1,7 @@
 import './index.scss'
 import { useParams } from 'react-router-dom'
 import { ReactNode, useEffect, useState } from 'react'
-import { useLogements } from 'utils/hooks'
+import { useApi } from 'utils/hooks'
 import { Logement } from 'utils/types'
 import Carousel from 'components/Carousel'
 import Tag from 'components/Tag'
@@ -13,7 +13,7 @@ export default function FicheLogement() {
   const { logementId } = useParams<string>()
   const [logement, setLogement] = useState<Logement>()
   const [equipmentsCollapse, setEquipmentsCollapse] = useState<ReactNode>()
-  const response = useLogements('http://localhost:3000/data.json')
+  const response = useApi('http://localhost:3000/data.json')
 
   useEffect(() => {
     setLogement(response.find((item) => item.id === logementId))

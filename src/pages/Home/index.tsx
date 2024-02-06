@@ -4,11 +4,11 @@ import Hero from 'components/Hero'
 import HomeCard from 'components/HomeCard'
 import picture from 'assets/homeHero.png'
 import { Logement } from 'utils/types'
-import { useLogements } from 'utils/hooks'
+import { useApi } from 'utils/hooks'
 
 function Home() {
   const [logementsList, setLogementsList] = useState<Logement[]>([])
-  const response = useLogements('http://localhost:3000/data.json')
+  const response = useApi('http://localhost:3000/data.json')
   useEffect(() => {
     setLogementsList(response)
   }, [response])
