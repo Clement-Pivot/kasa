@@ -7,6 +7,7 @@ import Carousel from '../../components/Carousel'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
 import Profile from '../../components/Profile'
+import Collapse from '../../components/Collapse'
 
 export default function FicheLogement() {
   const { logementId } = useParams<string>()
@@ -26,12 +27,15 @@ export default function FicheLogement() {
           <h2 className="logement__location">{logement.location} </h2>
           <div className="logement__tags">
             {logement.tags.map((tag) => (
-              <Tag text={tag} />
+              <Tag text={tag} key={'Tag-' + tag} />
             ))}
           </div>
           <div className="logement__infos">
             <Rating stars={logement.rating} />
             <Profile user={logement.host} />
+          </div>
+          <div className="logement__collapses">
+            <Collapse title="Description" content={logement.equipements} />
           </div>
         </>
       ) : (
