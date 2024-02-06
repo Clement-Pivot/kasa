@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import './index.scss'
 
 export default function Collapse({
@@ -5,9 +6,12 @@ export default function Collapse({
   content,
 }: {
   title: string
-  content: string | string[]
+  content: ReactNode
 }) {
-  console.log(typeof content)
-  console.log(content)
-  return <div></div>
+  return (
+    <div className="collapse">
+      <div className="collapse__header">{title}</div>
+      <p className="collapse__content">{content}</p>
+    </div>
+  )
 }
