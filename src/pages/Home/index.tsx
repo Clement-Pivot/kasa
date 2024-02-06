@@ -1,10 +1,10 @@
 import './index.scss'
 import { useEffect, useState } from 'react'
-import Hero from '../../components/Hero'
-import HomeCard from '../../components/HomeCard'
-import picture from '../../assets/homeHero.png'
-import { Logement } from '../../utils/types'
-import { useApi } from '../../utils/hooks'
+import Hero from '/src/components/Hero'
+import HomeCard from '/src/components/HomeCard'
+import picture from '/src/assets/homeHero.png'
+import { Logement } from '/src/utils/types'
+import { useApi } from '/src/utils/hooks'
 
 function Home() {
   const [logementsList, setLogementsList] = useState<Logement[]>([])

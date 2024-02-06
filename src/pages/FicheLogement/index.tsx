@@ -1,13 +1,13 @@
 import './index.scss'
 import { useParams } from 'react-router-dom'
 import { ReactNode, useEffect, useState } from 'react'
-import { useApi } from '../../utils/hooks'
-import { Logement } from '../../utils/types'
-import Carousel from '../../components/Carousel'
-import Tag from '../../components/Tag'
-import Rating from '../../components/Rating'
-import Profile from '../../components/Profile'
-import Collapse from '../../components/Collapse'
+import { useApi } from '/src/utils/hooks'
+import { Logement } from '/src/utils/types'
+import Carousel from '/src/components/Carousel'
+import Tag from '/src/components/Tag'
+import Rating from '/src/components/Rating'
+import Profile from '/src/components/Profile'
+import Collapse from '/src/components/Collapse'
 
 export default function FicheLogement() {
   const { logementId } = useParams<string>()

@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react'
-import Arrow from '../../assets/arrow.svg?react'
+import Arrow from '/src/assets/arrow.svg?react'
 import './index.scss'
 
 export default function Collapse({
