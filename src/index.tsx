@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Error404 from './pages/Error404'
 import Home from './pages/Home'
 import FicheLogement from './pages/FicheLogement'
+import About from './pages/About'
 
 const root = createRoot(document.getElementById('root')!)
 root.render(
@@ -18,6 +19,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/logement/:logementId" element={<FicheLogement />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
