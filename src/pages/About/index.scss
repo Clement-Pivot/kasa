@@ -1,0 +1,10 @@
+.about {
+  .hero {
+    margin-bottom: 20px;
+  }
+  &__collapses {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: -15px;
+  }
+}
