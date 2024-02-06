@@ -1,4 +1,4 @@
-import { Logement } from '/src/utils/types'
+import { Logement } from 'utils/types'
 import './index.scss'
 
 function HomeCard({ logement }: { logement: Logement }) {

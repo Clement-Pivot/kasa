@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { Logement } from '../types'
+import { Logement } from 'utils/types'
 
-export function useApi(url: string): Logement[] {
+export function useLogements(url: string): Logement[] {
   const [response, setResponse] = useState<Logement[]>([])
   useEffect(() => {
     fetch(url)

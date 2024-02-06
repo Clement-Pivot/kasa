@@ -1,5 +1,5 @@
 import './index.scss'
-import { Host } from '/src/utils/types'
+import { Host } from 'utils/types'
 
 export default function Profile({ user }: { user: Host }) {
   return (

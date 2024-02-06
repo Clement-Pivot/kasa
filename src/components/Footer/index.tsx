@@ -1,5 +1,5 @@
 import './index.scss'
-import Logo from '/src/assets/LOGO.svg?react'
+import Logo from 'assets/LOGO.svg?react'
 
 function Footer() {
   return (

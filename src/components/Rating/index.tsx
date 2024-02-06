@@ -1,6 +1,6 @@
 import './index.scss'
-import Inactive from '/src/assets/star-inactive.svg?react'
-import Active from '/src/assets/star-active.svg?react'
+import Inactive from 'assets/star-inactive.svg?react'
+import Active from 'assets/star-active.svg?react'
 
 export default function Rating({ stars }: { stars: number }) {
   return (
