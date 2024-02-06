@@ -1,3 +1,5 @@
+import { ReactElement } from 'react'
+
 export type Host = {
   name: string
   picture: string
@@ -14,4 +16,10 @@ export type Logement = {
   rating: number
   tags: string[]
   title: string
+}
+
+export type CollapseInfo = {
+  id: string
+  title: string
+  content: ReactElement
 }
