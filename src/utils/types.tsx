@@ -6,7 +6,7 @@ export type Host = {
 export type Logement = {
   cover: string
   description: string
-  equipements: string[]
+  equipments: string[]
   host: Host
   id: string
   location: string
