@@ -26,9 +26,13 @@ export default function Collapse({
           }
         />
       </div>
-      <p className={toggled ? 'collapse__content' : 'collapse__content hidden'}>
-        {content}
-      </p>
+      <div className="collapse__wrapper">
+        <p
+          className={toggled ? 'collapse__content' : 'collapse__content hidden'}
+        >
+          {content}
+        </p>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-@import '../../utils/variables.scss';
+@import '../../utils/variables';
 
 .collapse {
   position: relative;
@@ -19,10 +19,15 @@
     &--arrow {
       width: 18px;
       transform: rotate(270deg);
+      transition: transform 0.3s ease;
       &.active {
         transform: rotate(90deg);
       }
     }
+  }
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
   }
   &__content {
     font-weight: 400;
@@ -30,5 +35,9 @@
     margin: 0;
     padding: 10px;
     color: $primary-color;
+    transition: margin 0.3s ease;
+    &.hidden {
+      margin-top: -100%;
+    }
   }
 }
