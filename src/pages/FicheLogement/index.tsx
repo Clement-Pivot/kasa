@@ -16,7 +16,9 @@ export default function FicheLogement() {
   const response = useApi('http://localhost:3000/data.json')
 
   useEffect(() => {
-    setLogement(response.find((item) => item.id === logementId))
+    setLogement(
+      (response as Logement[]).find((item: Logement) => item.id === logementId),
+    )
   }, [response, logementId])
 
   useEffect(() => {
