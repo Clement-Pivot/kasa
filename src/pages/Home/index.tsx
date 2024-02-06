@@ -10,7 +10,9 @@ function Home() {
   const [logementsList, setLogementsList] = useState<Logement[]>([])
   const response = useApi('/data.json')
   useEffect(() => {
-    setLogementsList(response)
+    if (response.length > 0 && (response[0] as Logement).cover !== undefined) {
+      setLogementsList(response as Logement[])
+    }
   }, [response])
 
   return (
