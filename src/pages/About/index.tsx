@@ -28,15 +28,17 @@ export default function About() {
   }, [collapseData])
 
   return (
-    <div className="content">
+    <div className="about content">
       <Hero picture={picture} />
-      {collapseInfo.map((collapse) => (
-        <Collapse
-          title={collapse.title}
-          content={collapse.content}
-          key={'Collapse-' + collapse.title + '-' + collapse.id}
-        />
-      ))}
+      <div className="about__collapses">
+        {collapseInfo.map((collapse) => (
+          <Collapse
+            title={collapse.title}
+            content={collapse.content}
+            key={'Collapse-' + collapse.title + '-' + collapse.id}
+          />
+        ))}
+      </div>
     </div>
   )
 }
