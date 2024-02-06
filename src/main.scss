@@ -9,6 +9,7 @@ body {
 }
 
 .content {
+  box-sizing: border-box;
   padding: 20px;
   @include desktop {
     padding: 40px 100px;
