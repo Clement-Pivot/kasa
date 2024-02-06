@@ -18,9 +18,11 @@ function Home() {
   return (
     <section className="content">
       <Hero picture={picture} text="Chez vous, partout et ailleurs" />
-      {logementsList.map((logement: Logement) => (
-        <HomeCard key={logement.id} logement={logement} />
-      ))}
+      <div className="home__content">
+        {logementsList.map((logement: Logement) => (
+          <HomeCard key={logement.id} logement={logement} />
+        ))}
+      </div>
     </section>
   )
 }
