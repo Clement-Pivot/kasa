@@ -9,8 +9,6 @@
     "web-vitals": "^3.5.2"
   },
   "scripts": {
-    "sass": "sass --watch ./src/main.scss:./src/main.css",
-    "prefix": "postcss --watch ./src/main.css --use autoprefixer -d ./public/",
     "start": "vite",
     "build": "vite build"
   },
