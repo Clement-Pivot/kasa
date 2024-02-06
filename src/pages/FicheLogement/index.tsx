@@ -13,7 +13,7 @@ export default function FicheLogement() {
   const { logementId } = useParams<string>()
   const [logement, setLogement] = useState<Logement>()
   const [equipmentsCollapse, setEquipmentsCollapse] = useState<ReactNode>()
-  const response = useApi('http://localhost:3000/data.json')
+  const response = useApi('/data.json')
 
   useEffect(() => {
     setLogement(
