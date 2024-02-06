@@ -4,9 +4,11 @@ import 'components/Collapse'
 import { useApi } from 'utils/hooks'
 import { useEffect, useState } from 'react'
 import { CollapseInfo } from 'utils/types'
+import Hero from 'components/Hero'
+import picture from 'assets/aboutHero.png'
 
 export default function About() {
-  const collapseData = useApi('http://localhost:3000/about.json')
+  const collapseData = useApi('/about.json')
   const [collapseInfo, setCollapseInfo] = useState<CollapseInfo[]>([])
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export default function About() {
 
   return (
     <div className="content">
+      <Hero picture={picture} />
       {collapseInfo.map((collapse) => (
         <Collapse
           title={collapse.title}
