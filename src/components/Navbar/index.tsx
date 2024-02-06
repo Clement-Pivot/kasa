@@ -1,5 +1,5 @@
 import './index.scss'
-import { ReactComponent as Logo } from '../../assets/LOGO.svg'
+import Logo from '../../assets/LOGO.svg?react'
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 

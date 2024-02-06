@@ -8,7 +8,7 @@ import { useApi } from '../../utils/hooks'
 
 function Home() {
   const [logementsList, setLogementsList] = useState<Logement[]>([])
-  const response = useApi('http://127.0.0.1:3000/data.json')
+  const response = useApi('http://localhost:5173/data.json')
   useEffect(() => {
     setLogementsList(response)
   }, [response])

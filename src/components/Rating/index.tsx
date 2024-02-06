@@ -1,6 +1,6 @@
 import './index.scss'
-import { ReactComponent as Inactive } from '../../assets/star-inactive.svg'
-import { ReactComponent as Active } from '../../assets/star-active.svg'
+import Inactive from '../../assets/star-inactive.svg?react'
+import Active from '../../assets/star-active.svg?react'
 
 export default function Rating({ stars }: { stars: number }) {
   return (
