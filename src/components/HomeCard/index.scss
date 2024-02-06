@@ -1,3 +1,5 @@
+@import '../../utils/variables.scss';
+
 .homeCard {
   margin-top: 20px;
   position: relative;
@@ -14,7 +16,7 @@
   }
   &__title {
     padding: 10px;
-    color: white;
+    color: $white;
     font-size: 18px;
     margin: 0;
     position: absolute;
