@@ -1,3 +1,4 @@
+@import '/src/utils/mixins';
 @import '/src/utils/variables';
 
 .collapse {
@@ -38,6 +39,19 @@
     transition: margin 0.3s ease;
     &.hidden {
       margin-top: -100%;
+    }
+  }
+  @include desktop {
+    max-width: 1023px;
+    &__header {
+      height: 54px;
+      font-size: 24px;
+      &--arrow {
+        width: 24px;
+      }
+    }
+    &__content {
+      font-size: 18px;
     }
   }
 }
