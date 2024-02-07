@@ -3,16 +3,18 @@
 
 .home {
   &__content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    gap: 20px;
     @include desktop {
-      position: relative;
-      z-index: -2;
       padding: 50px;
       background-color: $gray;
-      display: flex;
-      flex-flow: row wrap;
       margin-top: 50px;
       border-radius: 25px;
-      gap: 50px;
+      row-gap: 50px;
+      column-gap: 50px;
+      align-items: stretch;
     }
   }
 }
