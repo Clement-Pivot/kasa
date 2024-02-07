@@ -5,6 +5,7 @@
   &__collapses {
     display: flex;
     flex-flow: column;
-    margin-bottom: -15px;
+    margin: 0 auto -15px;
+    width: fit-content;
   }
 }
