@@ -1,13 +1,16 @@
+@import '/src/utils/mixins';
+
 .carousel {
   position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
+  height: 255px;
   &__img {
     border-radius: 20px;
     width: 100%;
-    height: 255px;
+    height: 100%;
     object-fit: cover;
   }
   &__arrow {
@@ -19,5 +22,8 @@
       left: 0;
       transform: rotateY(180deg);
     }
+  }
+  @include desktop {
+    height: 415px;
   }
 }
