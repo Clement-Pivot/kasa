@@ -15,21 +15,17 @@ export default function Collapse({
   }
 
   return (
-    <div className="collapse">
-      <div className="collapse__header" onClick={toggle}>
+    <div className="colapse">
+      <div className="colapse__header" onClick={toggle}>
         {title}
         <Arrow
           className={
-            toggled
-              ? 'collapse__header--arrow active'
-              : 'collapse__header--arrow'
+            toggled ? 'colapse__header--arrow active' : 'colapse__header--arrow'
           }
         />
       </div>
-      <div className="collapse__wrapper">
-        <p
-          className={toggled ? 'collapse__content' : 'collapse__content hidden'}
-        >
+      <div className="colapse__wrapper">
+        <p className={toggled ? 'colapse__content' : 'colapse__content hidden'}>
           {content}
         </p>
       </div>

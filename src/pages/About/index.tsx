@@ -8,12 +8,12 @@ import Hero from 'components/Hero'
 import picture from 'assets/aboutHero.png'
 
 export default function About() {
-  const collapseData = useApi('/about.json')
-  const [collapseInfo, setCollapseInfo] = useState<CollapseInfo[]>([])
+  const colapseData = useApi('/about.json')
+  const [colapseInfo, setCollapseInfo] = useState<CollapseInfo[]>([])
 
   useEffect(() => {
     setCollapseInfo(
-      collapseData.map((item) => {
+      colapseData.map((item) => {
         if ((item as CollapseInfo).content !== undefined) {
           return {
             id: item.id,
@@ -25,17 +25,17 @@ export default function About() {
         }
       }),
     )
-  }, [collapseData])
+  }, [colapseData])
 
   return (
     <div className="about content">
       <Hero picture={picture} />
-      <div className="about__collapses">
-        {collapseInfo.map((collapse) => (
+      <div className="about__colapses">
+        {colapseInfo.map((colapse) => (
           <Collapse
-            title={collapse.title}
-            content={collapse.content}
-            key={'Collapse-' + collapse.title + '-' + collapse.id}
+            title={colapse.title}
+            content={colapse.content}
+            key={'Collapse-' + colapse.title + '-' + colapse.id}
           />
         ))}
       </div>
