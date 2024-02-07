@@ -50,7 +50,7 @@ export default function FicheLogement() {
             <Rating stars={logement.rating} />
             <Profile user={logement.host} />
           </div>
-          <div className="logement__collapses">
+          <div className="logement__colapses">
             <Collapse title="Description" content={logement.description} />
             <Collapse title="Équipements" content={equipmentsCollapse} />
           </div>
