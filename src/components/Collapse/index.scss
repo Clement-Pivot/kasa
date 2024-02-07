@@ -41,7 +41,7 @@
       margin-top: -100%;
     }
   }
-  @include desktop {
+  @include desktop(768px) {
     max-width: 1023px;
     &__header {
       height: 54px;
