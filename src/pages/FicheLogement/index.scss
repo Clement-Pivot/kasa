@@ -1,4 +1,5 @@
 @import '/src/utils/variables';
+@import '/src/utils/mixins';
 
 .logement {
   color: $primary-color;
@@ -22,5 +23,30 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 15px;
+  }
+  @include desktop {
+    &__header {
+      font-size: 36px;
+    }
+    &__location {
+      font-size: 18px;
+    }
+    &__infos {
+      margin-top: -80px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+    &__tags {
+      margin-top: 25px;
+    }
+    &__colapses {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 76px;
+      .colapse:not(:has(.colapse__header--arrow.active)) {
+        height: 54px;
+      }
+    }
   }
 }
