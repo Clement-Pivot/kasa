@@ -32,6 +32,7 @@
   }
   @include desktop {
     height: 233px;
+    @include shadow;
     &__header {
       font-size: 48px;
       width: 100%;
