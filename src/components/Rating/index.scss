@@ -1,0 +1,10 @@
+@import '/src/utils/mixins';
+
+.rating {
+  svg {
+    @include desktop {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
