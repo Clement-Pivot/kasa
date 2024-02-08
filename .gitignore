@@ -11,8 +11,7 @@
 *.sln.docstates
 
 Présentation
-src/main.css
-src/main.css.map
+coverage
 .vscode
 
 # User-specific files (MonoDevelop/Xamarin Studio)
