@@ -28,7 +28,7 @@ export default function About() {
   }, [colapseData])
 
   return (
-    <div className="about content">
+    <main className="about content">
       <Hero picture={picture} />
       <div className="about__colapses">
         {colapseInfo.map((colapse) => (
@@ -39,6 +39,6 @@ export default function About() {
           />
         ))}
       </div>
-    </div>
+    </main>
   )
 }

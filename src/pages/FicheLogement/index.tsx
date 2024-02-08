@@ -35,7 +35,7 @@ export default function FicheLogement() {
   }, [logement])
 
   return (
-    <section className="content logement">
+    <main className="content logement">
       {logement ? (
         <>
           <Carousel pictures={logement.pictures} />
@@ -58,6 +58,6 @@ export default function FicheLogement() {
       ) : (
         ''
       )}
-    </section>
+    </main>
   )
 }
