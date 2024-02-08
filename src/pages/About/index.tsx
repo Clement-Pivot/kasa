@@ -7,7 +7,7 @@ import { CollapseInfo } from 'utils/types'
 import Hero from 'components/Hero'
 import picture from 'assets/aboutHero.png'
 
-export default function About() {
+export default function About(): JSX.Element {
   const colapseData = useApi('/data/about.json')
   const [colapseInfo, setCollapseInfo] = useState<CollapseInfo[]>([])
 

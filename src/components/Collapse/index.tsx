@@ -8,7 +8,7 @@ export default function Collapse({
 }: {
   title: string
   content: ReactNode
-}) {
+}): JSX.Element {
   const [toggled, setToggle] = useState<boolean>(false)
   const toggle = () => {
     setToggle((toggle) => !toggle)

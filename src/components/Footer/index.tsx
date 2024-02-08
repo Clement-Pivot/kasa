@@ -1,7 +1,7 @@
 import './index.scss'
 import Logo from 'assets/LOGO.svg?react'
 
-function Footer() {
+function Footer(): JSX.Element {
   return (
     <footer className="footer">
       <Logo className="footer__logo" />

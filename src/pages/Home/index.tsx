@@ -6,7 +6,7 @@ import picture from 'assets/homeHero.png'
 import { Logement } from 'utils/types'
 import { useApi } from 'utils/hooks'
 
-function Home() {
+function Home(): JSX.Element {
   const [logementsList, setLogementsList] = useState<Logement[]>([])
   const response = useApi('/data/data.json')
   useEffect(() => {

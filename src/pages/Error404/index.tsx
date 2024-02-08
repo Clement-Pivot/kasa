@@ -1,7 +1,7 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
 
-function Error404() {
+function Error404(): JSX.Element {
   return (
     <main className="error404">
       <h1 className="error404__header">404</h1>

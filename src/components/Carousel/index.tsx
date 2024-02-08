@@ -2,9 +2,14 @@ import './index.scss'
 import { SyntheticEvent, useEffect, useState } from 'react'
 import Arrow from 'assets/arrow.svg?react'
 
-export default function Carousel({ pictures }: { pictures: string[] }) {
+export default function Carousel({
+  pictures,
+}: {
+  pictures: string[]
+}): JSX.Element {
   const [activePicture, setActivePicture] = useState<string>('')
   const [activePictureIndex, setActivePictureIndex] = useState<number>(0)
+
   useEffect(() => {
     setActivePicture(pictures[activePictureIndex])
   }, [pictures, activePictureIndex])

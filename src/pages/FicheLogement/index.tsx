@@ -1,6 +1,6 @@
 import './index.scss'
 import { useParams } from 'react-router-dom'
-import { ReactNode, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useApi } from 'utils/hooks'
 import { Logement } from 'utils/types'
 import Carousel from 'components/Carousel'
@@ -10,11 +10,11 @@ import Profile from 'components/Profile'
 import Collapse from 'components/Collapse'
 import { Navigate } from 'react-router-dom'
 
-export default function FicheLogement(): ReactNode {
+export default function FicheLogement(): JSX.Element {
   const { logementId } = useParams<string>()
   const [logement, setLogement] = useState<Logement>()
   const [isValidId, setValidId] = useState<boolean>(true)
-  const [equipmentsCollapse, setEquipmentsCollapse] = useState<ReactNode>()
+  const [equipmentsCollapse, setEquipmentsCollapse] = useState<JSX.Element>()
   const response = useApi('/data/data.json')
 
   useEffect(() => {

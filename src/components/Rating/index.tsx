@@ -2,7 +2,7 @@ import './index.scss'
 import Inactive from 'assets/star-inactive.svg?react'
 import Active from 'assets/star-active.svg?react'
 
-export default function Rating({ stars }: { stars: number }) {
+export default function Rating({ stars }: { stars: number }): JSX.Element {
   return (
     <div className="rating">
       {[...Array(5).keys()].map((i) => {

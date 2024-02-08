@@ -3,7 +3,7 @@ import Logo from 'assets/LOGO.svg?react'
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-function Navbar() {
+function Navbar(): JSX.Element {
   const location = useLocation()
   const [pathname, setPathname] = useState('')
 

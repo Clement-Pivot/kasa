@@ -5,7 +5,7 @@ interface Props {
   text?: string
 }
 
-function Hero({ picture, text = '' }: Props) {
+function Hero({ picture, text = '' }: Props): JSX.Element {
   return (
     <h1 className="hero">
       <img className="hero__img" src={picture} alt="Hero section background" />
