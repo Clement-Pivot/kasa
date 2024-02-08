@@ -17,6 +17,8 @@ export default defineConfig({
     port: 3000,
   },
   test: {
+    globals: true,
+    environment: 'jsdom',
     resolveSnapshotPath: (testPath, snapExtension) => testPath + snapExtension,
   },
 })
