@@ -1,8 +1,8 @@
 # Kasa
 
- Code du projet 11 Kasa de la formation React d'OpenClassroom en React et SASS.
+Code du projet 11 Kasa de la formation React d'OpenClassroom en TypeScript avec React et SASS.
 
-### Pré-requis
+## Pré-requis
 
 - Un navigateur internet
 - NPM
@@ -14,9 +14,13 @@
 
 ## Fabriqué avec
 
-* [Visual Studio Code](https://code.visualstudio.com/) - Editeur de texte
-* [NPM](https://www.npmjs.com/) - Package Manager
+- [Visual Studio Code](https://code.visualstudio.com/) - Editeur de texte
+- [NPM](https://www.npmjs.com/) - Package Manager
+- [Vite](https://vitejs.dev/) - Bundler
+- [React](https://react.dev/) - Framework
+- [SASS](https://sass-lang.com/) - Préprocesseur CSS
+- [TypeScript](https://www.typescriptlang.org/) - Typage de JavaScript
 
-## Auteurs
+### Auteurs
 
-* **Clément Pivot** _alias_ [@malfeitor](https://github.com/malfeitor)
+- **Clément Pivot** _alias_ [@malfeitor](https://github.com/malfeitor)
