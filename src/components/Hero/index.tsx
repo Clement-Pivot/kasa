@@ -7,10 +7,10 @@ interface Props {
 
 function Hero({ picture, text = '' }: Props) {
   return (
-    <div className="hero">
+    <h1 className="hero">
       <img className="hero__img" src={picture} alt="Hero section background" />
-      <h1 className="hero__header">{text}</h1>
-    </div>
+      {text.length > 0 ? <p className="hero__header">{text}</p> : ''}
+    </h1>
   )
 }
 
