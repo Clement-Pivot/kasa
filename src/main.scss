@@ -4,14 +4,20 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  padding: 0;
 }
 
 .content {
+  // viewport height without nav and footer height, to push footer at bottom
+  min-height: calc(100vh - 278px);
   box-sizing: border-box;
   padding: 20px;
   @include desktop {
     padding: 40px 100px;
+    min-height: calc(100vh - 322px);
   }
 }
