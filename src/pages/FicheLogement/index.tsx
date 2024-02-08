@@ -8,17 +8,23 @@ import Tag from 'components/Tag'
 import Rating from 'components/Rating'
 import Profile from 'components/Profile'
 import Collapse from 'components/Collapse'
+import { Navigate } from 'react-router-dom'
 
-export default function FicheLogement() {
+export default function FicheLogement(): ReactNode {
   const { logementId } = useParams<string>()
   const [logement, setLogement] = useState<Logement>()
+  const [isValidId, setValidId] = useState<boolean>(true)
   const [equipmentsCollapse, setEquipmentsCollapse] = useState<ReactNode>()
   const response = useApi('/data/data.json')
 
   useEffect(() => {
-    setLogement(
-      (response as Logement[]).find((item: Logement) => item.id === logementId),
+    const responseLogement = (response as Logement[]).find(
+      (item: Logement) => item.id === logementId,
     )
+    if (responseLogement?.cover === undefined && response.length > 0) {
+      setValidId(() => false)
+    }
+    setLogement(responseLogement)
   }, [response, logementId])
 
   useEffect(() => {
@@ -34,7 +40,7 @@ export default function FicheLogement() {
     )
   }, [logement])
 
-  return (
+  return isValidId ? (
     <main className="content logement">
       {logement ? (
         <>
@@ -59,5 +65,7 @@ export default function FicheLogement() {
         ''
       )}
     </main>
+  ) : (
+    <Navigate to="/error" />
   )
 }
