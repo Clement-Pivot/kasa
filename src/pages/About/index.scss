@@ -1,11 +1,20 @@
+@import '/src/utils/mixins';
+
 .about {
   .hero {
     margin-bottom: 20px;
+    @include desktop(768px) {
+      margin-bottom: 38px;
+    }
   }
   &__colapses {
     display: flex;
+    row-gap: 20px;
     flex-flow: column;
     margin: 0 auto -15px;
     width: fit-content;
+    @include desktop(768px) {
+      row-gap: 30px;
+    }
   }
 }

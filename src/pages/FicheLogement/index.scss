@@ -24,6 +24,10 @@
     justify-content: space-between;
     margin: 0 0 15px;
   }
+  &__colapses {
+    display: grid;
+    row-gap: 20px;
+  }
   @include desktop(768px) {
     display: flex;
     flex-direction: column;
@@ -47,8 +51,7 @@
       margin-top: 15px;
     }
     &__colapses {
-      margin-top: 10px;
-      display: grid;
+      margin-top: 20px;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 76px;
       .colapse:not(:has(.colapse__header--arrow.active)) {
