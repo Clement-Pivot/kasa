@@ -8,7 +8,7 @@ import { useApi } from 'utils/hooks'
 
 function Home() {
   const [logementsList, setLogementsList] = useState<Logement[]>([])
-  const response = useApi('/data.json')
+  const response = useApi('/data/data.json')
   useEffect(() => {
     if (response.length > 0 && (response[0] as Logement).cover !== undefined) {
       setLogementsList(response as Logement[])

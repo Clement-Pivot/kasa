@@ -8,7 +8,7 @@ import Hero from 'components/Hero'
 import picture from 'assets/aboutHero.png'
 
 export default function About() {
-  const colapseData = useApi('/about.json')
+  const colapseData = useApi('/data/about.json')
   const [colapseInfo, setCollapseInfo] = useState<CollapseInfo[]>([])
 
   useEffect(() => {
