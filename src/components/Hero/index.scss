@@ -29,13 +29,13 @@
     top: 0;
     bottom: 0;
     left: 20px;
+    @include desktop {
+      font-size: 48px;
+      width: 100%;
+    }
   }
   @include desktop {
     height: 233px;
     @include shadow;
-    &__header {
-      font-size: 48px;
-      width: 100%;
-    }
   }
 }

@@ -19,27 +19,27 @@
   }
   &__header {
     font-size: 96px;
+    @include desktop {
+      font-size: 288px;
+    }
   }
   &__text {
     font-weight: normal;
     line-height: 142.6%;
     font-size: 18px;
     width: 260px;
-  }
-  &__link {
-    font-size: 14px;
-  }
-  @include desktop {
-    row-gap: 139px;
-    &__header {
-      font-size: 288px;
-    }
-    &__text {
+    @include desktop {
       font-size: 36px;
       width: auto;
     }
-    &__link {
+  }
+  &__link {
+    font-size: 14px;
+    @include desktop {
       font-size: 18px;
     }
+  }
+  @include desktop {
+    row-gap: 139px;
   }
 }
