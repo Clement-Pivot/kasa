@@ -1,7 +1,9 @@
 import './index.scss'
 import { Host } from 'utils/types'
 
-export default function Profile({ user }: { user: Host }): JSX.Element {
+type Props = { user: Host }
+
+export default function Profile({ user }: Props): JSX.Element {
   return (
     <div className="profile">
       <div className="profile__names">

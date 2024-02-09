@@ -2,13 +2,12 @@ import { ReactNode, useState } from 'react'
 import Arrow from 'assets/arrow.svg?react'
 import './index.scss'
 
-export default function Collapse({
-  title,
-  content,
-}: {
+type Props = {
   title: string
   content: ReactNode
-}): JSX.Element {
+}
+
+export default function Collapse({ title, content }: Props): JSX.Element {
   const [toggled, setToggle] = useState<boolean>(false)
   const toggle = () => {
     setToggle((toggle) => !toggle)

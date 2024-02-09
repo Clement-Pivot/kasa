@@ -1,7 +1,9 @@
 import { Logement } from 'utils/types'
 import './index.scss'
 
-function HomeCard({ logement }: { logement: Logement }): JSX.Element {
+type Props = { logement: Logement }
+
+function HomeCard({ logement }: Props): JSX.Element {
   return (
     <article className="homeCard">
       <a
