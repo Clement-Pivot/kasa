@@ -10,9 +10,12 @@
   &__header,
   &__text,
   &__link {
-    color: $primary-color;
     text-align: center;
     margin: 0;
+  }
+  &__header,
+  &__text {
+    color: $primary-color;
   }
   &__header {
     font-size: 96px;
