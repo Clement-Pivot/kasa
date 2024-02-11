@@ -3,44 +3,42 @@
 
 .logement {
   color: $primary-color;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   &__header {
     font-size: 18px;
     margin: 15px 0 5px;
     line-height: 140%;
+    @include desktop(768px) {
+      @include desktop(768px);
+    }
   }
   &__location {
     color: $black;
     font-weight: 400;
     font-size: 14px;
     margin: 0 0 10px;
+    @include desktop(768px) {
+      font-size: 18px;
+    }
   }
   &__tags {
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
     margin-bottom: 15px;
+    @include desktop(768px) {
+      margin-top: 15px;
+    }
   }
   &__infos {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 0 15px;
-  }
-  &__colapses {
-    display: grid;
-    row-gap: 20px;
-  }
-  @include desktop(768px) {
-    display: flex;
-    flex-direction: column;
-    &__header {
-      font-size: 36px;
-    }
-    &__location {
-      font-size: 18px;
-    }
-    &__infos {
-      margin-top: -130px;
+    @include desktop(768px) {
+      margin-top: -120px;
       justify-self: flex-end;
       display: flex;
       flex-direction: column-reverse;
@@ -49,10 +47,11 @@
         margin-top: 10px;
       }
     }
-    &__tags {
-      margin-top: 15px;
-    }
-    &__colapses {
+  }
+  &__colapses {
+    display: grid;
+    row-gap: 20px;
+    @include desktop(768px) {
       margin-top: 20px;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 76px;
