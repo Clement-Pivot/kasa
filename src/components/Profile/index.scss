@@ -6,17 +6,15 @@
   &__names {
     font-size: 12px;
     margin-right: 10px;
+    @include desktop(768px) {
+      font-size: 18px;
+    }
   }
   &__picture {
     width: 32px;
     object-fit: cover;
     border-radius: 50px;
-  }
-  @include desktop(768px) {
-    &__names {
-      font-size: 18px;
-    }
-    &__picture {
+    @include desktop(768px) {
       width: 64px;
     }
   }

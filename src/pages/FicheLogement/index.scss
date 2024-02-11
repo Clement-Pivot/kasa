@@ -4,51 +4,71 @@
 .logement {
   color: $primary-color;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    'carousel carousel'
+    'header header'
+    'location location'
+    'tags tags'
+    'rating profile'
+    'colapses colapses';
+  .carousel {
+    grid-area: carousel;
+  }
   &__header {
+    grid-area: header;
     font-size: 18px;
-    margin: 15px 0 5px;
+    font-weight: 400;
+    margin: 0;
     line-height: 140%;
     @include desktop(768px) {
-      @include desktop(768px);
+      font-size: 36px;
     }
   }
   &__location {
+    grid-area: location;
     color: $black;
     font-weight: 400;
     font-size: 14px;
-    margin: 0 0 10px;
+    margin: 0;
     @include desktop(768px) {
       font-size: 18px;
     }
   }
   &__tags {
+    grid-area: tags;
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
-    margin-bottom: 15px;
+    margin: 0;
     @include desktop(768px) {
-      margin-top: 15px;
+      align-self: center;
+      height: max-content;
     }
   }
-  &__infos {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 15px;
+  .profile {
+    width: max-content;
+    grid-area: profile;
+    justify-self: end;
+    align-self: center;
     @include desktop(768px) {
-      margin-top: -120px;
-      justify-self: flex-end;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-end;
-      .rating {
-        margin-top: 10px;
-      }
+      align-self: start;
+    }
+  }
+  .rating {
+    width: max-content;
+    grid-area: rating;
+    justify-self: start;
+    align-self: center;
+    @include desktop(768px) {
+      justify-self: end;
+      margin: 0;
     }
   }
   &__colapses {
+    grid-area: colapses;
     display: grid;
     row-gap: 20px;
     @include desktop(768px) {
@@ -59,5 +79,13 @@
         height: 54px;
       }
     }
+  }
+  @include desktop(768px) {
+    grid-template-areas:
+      'carousel carousel carousel'
+      'header header profile'
+      'location location profile'
+      'tags rating rating'
+      'colapses colapses colapses';
   }
 }

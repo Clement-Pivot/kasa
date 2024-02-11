@@ -41,9 +41,9 @@ export default function FicheLogement(): JSX.Element {
   }, [logement])
 
   return isValidId ? (
-    <main className="content logement">
+    <main className="content">
       {logement ? (
-        <>
+        <div className=" logement">
           <Carousel pictures={logement.pictures} />
           <h1 className="logement__header">{logement.title}</h1>
           <h2 className="logement__location">{logement.location} </h2>
@@ -52,15 +52,13 @@ export default function FicheLogement(): JSX.Element {
               <Tag text={tag} key={'Tag-' + tag} />
             ))}
           </div>
-          <div className="logement__infos">
-            <Rating stars={logement.rating} />
-            <Profile user={logement.host} />
-          </div>
+          <Rating stars={logement.rating} />
+          <Profile user={logement.host} />
           <div className="logement__colapses">
             <Collapse title="Description" content={logement.description} />
             <Collapse title="Équipements" content={equipmentsCollapse} />
           </div>
-        </>
+        </div>
       ) : (
         ''
       )}
