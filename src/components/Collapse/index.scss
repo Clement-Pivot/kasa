@@ -23,6 +23,13 @@
       &.active {
         transform: rotate(90deg);
       }
+      @include desktop(768px) {
+        width: 24px;
+      }
+    }
+    @include desktop(768px) {
+      height: 54px;
+      font-size: 24px;
     }
   }
   &__wrapper {
@@ -39,18 +46,11 @@
     &.hidden {
       margin-top: -100%;
     }
+    @include desktop(768px) {
+      font-size: 18px;
+    }
   }
   @include desktop(768px) {
     max-width: 1023px;
-    &__header {
-      height: 54px;
-      font-size: 24px;
-      &--arrow {
-        width: 24px;
-      }
-    }
-    &__content {
-      font-size: 18px;
-    }
   }
 }
