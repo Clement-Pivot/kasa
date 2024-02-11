@@ -32,6 +32,11 @@ export default function Carousel({ pictures }: Props): JSX.Element {
       )}
       <img src={activePicture} alt="Carrousel" className="carousel__img" />
       {pictures.length > 1 && (
+        <div className="carousel__progression">
+          {activePictureIndex + 1}/{pictures.length}
+        </div>
+      )}
+      {pictures.length > 1 && (
         <Arrow onClick={nextPicture} className="carousel__arrow" />
       )}
     </div>
