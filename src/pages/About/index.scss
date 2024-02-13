@@ -1,6 +1,7 @@
 @import '/src/utils/mixins';
 
 .about {
+  padding: 20px;
   .hero {
     margin-bottom: 20px;
     @include desktop(768px) {
@@ -16,5 +17,8 @@
     @include desktop(768px) {
       row-gap: 30px;
     }
+  }
+  @include desktop(768px) {
+    padding: 38px 100px;
   }
 }
