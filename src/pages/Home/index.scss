@@ -3,17 +3,17 @@
 
 .home {
   &__content {
-    margin-top: 20px;
+    margin-top: 22px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
     gap: 20px;
     @include desktop {
       padding: 50px;
       background-color: $gray;
-      margin-top: 50px;
+      margin-top: 43px;
       border-radius: 25px;
       row-gap: 50px;
-      column-gap: 50px;
+      column-gap: 60px;
       align-items: stretch;
     }
   }
