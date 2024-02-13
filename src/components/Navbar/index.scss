@@ -34,6 +34,9 @@
           font-size: 24px;
         }
       }
+      @include desktop(768px) {
+        margin-left: 57px;
+      }
     }
     .active {
       text-decoration: underline;
