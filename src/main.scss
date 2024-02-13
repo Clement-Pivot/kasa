@@ -15,7 +15,7 @@ body,
   // viewport height without nav and footer height, to push footer at bottom
   min-height: calc(100vh - 253px);
   box-sizing: border-box;
-  padding: 20px;
+  padding: 27px 20px;
   @include desktop {
     padding: 50px 100px;
     min-height: calc(100vh - 304px);

@@ -35,11 +35,15 @@
   }
   &__link {
     font-size: 14px;
+    &:visited {
+      color: $black;
+    }
     @include desktop {
       font-size: 18px;
     }
   }
   @include desktop {
     row-gap: 139px;
+    margin: 139px 0;
   }
 }
