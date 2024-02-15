@@ -24,20 +24,18 @@ export default function Carousel({ pictures }: Props): JSX.Element {
   }
   return (
     <div className="carousel">
-      {pictures.length > 1 && (
-        <Arrow
-          onClick={prevPicture}
-          className="carousel__arrow carousel__arrow--prev"
-        />
-      )}
       <img src={activePicture} alt="Carrousel" className="carousel__img" />
       {pictures.length > 1 && (
-        <div className="carousel__progression">
-          {activePictureIndex + 1}/{pictures.length}
-        </div>
-      )}
-      {pictures.length > 1 && (
-        <Arrow onClick={nextPicture} className="carousel__arrow" />
+        <>
+          <Arrow
+            onClick={prevPicture}
+            className="carousel__arrow carousel__arrow--prev"
+          />
+          <div className="carousel__progression">
+            {activePictureIndex + 1}/{pictures.length}
+          </div>
+          <Arrow onClick={nextPicture} className="carousel__arrow" />
+        </>
       )}
     </div>
   )
