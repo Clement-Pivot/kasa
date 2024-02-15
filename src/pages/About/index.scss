@@ -12,7 +12,7 @@
     display: flex;
     row-gap: 20px;
     flex-flow: column;
-    margin: 0 auto -15px;
+    margin: 0 auto;
     width: fit-content;
     @include desktop(768px) {
       row-gap: 30px;
